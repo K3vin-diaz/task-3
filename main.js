@@ -1,9 +1,8 @@
 const HMACGenerator = require('./HMAC.js');
-const HelpTable = require('./HelpTable.js').default;
+const HelpTable = require('./HelpTable.js');
 const GameRules = require('./GameRules.js');    
 const readline = require('readline');
 
-// Función para validar la entrada
 function validateInput(args) {
     if (args.length < 3 || args.length % 2 === 0) {
         console.error("Error: You must provide an odd number of non-repeating strings (at least 3).");
@@ -18,7 +17,6 @@ function validateInput(args) {
     }
 }
 
-// Función principal del programa
 function main() {
     const args = process.argv.slice(2);
     validateInput(args);
