@@ -1,12 +1,13 @@
+const { sha3_256 } = require('js-sha3');
 const crypto = require('crypto');
 
 class HMACGenerator {
     constructor() {
-        this.key = crypto.randomBytes(32);
+        this.key = crypto.randomBytes(32); 
     }
 
     generateHMAC(message) {
-        return crypto.createHmac('sha256', this.key).update(message).digest('hex');
+        return sha3_256(message);
     }
 
     getKey() {

@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "chalk": "^5.3.0",
+    "js-sha3": "^0.9.3",
     "prompt-sync": "^4.2.0",
     "table": "^6.8.2"
   }
